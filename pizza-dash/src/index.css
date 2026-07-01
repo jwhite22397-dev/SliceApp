@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-pizza-cream font-body text-gray-800 antialiased;
+    min-height: 100vh;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-pizza-red text-white font-semibold px-6 py-3 rounded-full 
+           hover:bg-pizza-red-dark active:scale-95 transition-all duration-200 
+           shadow-lg hover:shadow-xl cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-pizza-red font-semibold px-6 py-3 rounded-full 
+           border-2 border-pizza-red hover:bg-pizza-cream active:scale-95 
+           transition-all duration-200 cursor-pointer;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-md hover:shadow-xl transition-all 
+           duration-300 overflow-hidden cursor-pointer hover:-translate-y-1;
+  }
+
+  .badge {
+    @apply text-xs font-semibold px-2 py-1 rounded-full;
+  }
+}
+
+/* Pizza spinning animation for loader */
+.pizza-loader {
+  animation: pizzaSpin 1.5s ease-in-out infinite;
+}
+
+@keyframes pizzaSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8E1;
+}
+::-webkit-scrollbar-thumb {
+  background: #D32F2F;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B71C1C;
+}
+
+/* Star rating */
+.star-filled {
+  color: #FFB300;
+}
+.star-empty {
+  color: #E0E0E0;
+}
