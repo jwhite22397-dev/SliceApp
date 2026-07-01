@@ -1,0 +1,11 @@
+{
+  "name": "slicescout",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A pizza-themed local ordering finder that ranks nearby pizzerias.",
+  "type": "module",
+  "scripts": {
+    "check": "node --check app.js",
+    "start": "python3 -m http.server 4173"
+  }
+}

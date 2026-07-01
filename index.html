@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SliceScout - Pizza Near Me</title>
+    <meta
+      name="description"
+      content="Find the closest pizza place near you and jump straight to ordering."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <a class="brand" href="#" aria-label="SliceScout home">
+          <span class="brand-mark">🍕</span>
+          <span>SliceScout</span>
+        </a>
+        <a class="nav-link" href="#results">Find pizza</a>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Hot slices, zero detours</p>
+          <h1>Find the closest pizza spot and order in one tap.</h1>
+          <p class="hero-text">
+            SliceScout ranks nearby pizza places by distance, quality signals,
+            and ordering availability, then sends you straight to the best order
+            page it can find.
+          </p>
+
+          <div class="search-card" aria-label="Pizza finder controls">
+            <div>
+              <label for="locationSelect">Try a demo city</label>
+              <select id="locationSelect">
+                <option value="">Use my current location</option>
+              </select>
+            </div>
+            <button id="findPizzaButton" type="button">Find my slice</button>
+          </div>
+
+          <p id="statusMessage" class="status" role="status">
+            Choose a location option or let your browser share your position.
+          </p>
+        </div>
+
+        <aside class="deal-card" aria-label="Featured pizza deal">
+          <div class="deal-badge">Closest pick</div>
+          <div class="pizza-illustration" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <h2>Pizza radar is ready</h2>
+          <p>Distance, delivery links, and slice vibes all in one place.</p>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="how-it-works" aria-label="How SliceScout works">
+        <article>
+          <span>1</span>
+          <h2>Locate</h2>
+          <p>Use your browser location or pick a demo city.</p>
+        </article>
+        <article>
+          <span>2</span>
+          <h2>Rank</h2>
+          <p>Nearby pizza places are scored by distance and order readiness.</p>
+        </article>
+        <article>
+          <span>3</span>
+          <h2>Order</h2>
+          <p>Tap the best match to open its ordering page.</p>
+        </article>
+      </section>
+
+      <section id="results" class="results-section" aria-live="polite">
+        <div class="section-heading">
+          <p class="eyebrow">Your pizza board</p>
+          <h2>Best nearby slices</h2>
+        </div>
+        <div id="bestMatch" class="best-match empty-state">
+          <h3>Ready when you are.</h3>
+          <p>
+            Hit "Find my slice" to compare nearby pizzerias and surface the
+            fastest path to ordering.
+          </p>
+        </div>
+        <div id="resultsList" class="results-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Built for pizza discovery. Results are powered by open map data when
+        location access is available.
+      </p>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
