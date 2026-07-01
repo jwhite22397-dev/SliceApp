@@ -17,7 +17,11 @@ export function Header({
     <header className="header">
       <div className="header__row">
         <div className="brand">
-          <img src="/pizza.svg" alt="" className="brand__logo" />
+          <img
+            src={`${import.meta.env.BASE_URL}pizza.svg`}
+            alt=""
+            className="brand__logo"
+          />
           <span>
             Slice<span className="brand__dash">App</span>
           </span>
